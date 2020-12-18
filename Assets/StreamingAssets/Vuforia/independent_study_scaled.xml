@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="A2SnakesV4" size="0.080000 0.080000" />
+    <ImageTarget name="StonesColor" size="0.233000 0.163100" />
+    <ImageTarget name="Marker-3V3" size="0.080000 0.080169" />
+    <ImageTarget name="Marker-1V3" size="0.080000 0.080169" />
+    <ImageTarget name="Marker-3V2" size="0.080000 0.080169" />
+    <ImageTarget name="Marker-2V2" size="0.080000 0.080169" />
+    <ImageTarget name="Marker-1V2" size="0.080000 0.080169" />
+    <ImageTarget name="Marker-4" size="0.080000 0.079787" />
+    <ImageTarget name="Marker-3" size="0.080000 0.079787" />
+    <ImageTarget name="Marker-2" size="0.080000 0.079787" />
+    <ImageTarget name="Marker-1" size="0.080000 0.079787" />
+  </Tracking>
+</QCARConfig>

@@ -1,0 +1,63 @@
+stepList.Add (new stepObject ("Do-it-yourself maintenance. The air conditioning filter must be changed regularly to maintain air conditioning efficiency.", therblig.UNKNOWN));
+
+        // Engine Switch
+        stepList.Add (new stepObject ("Find the engine switch.", therblig.FIND));
+        stepList.Last ().annotations.Add (objectsOfInterest["engine-switch"]);
+        stepList.Add (new stepObject ("Inspect the engine switch to verify it is off. If it is not off, abort the task. ", therblig.INSPECT));
+        stepList.Last ().annotations.Add (objectsOfInterest["engine-switch"]);
+
+        // Globe Box
+        stepList.Add (new stepObject ("Find the glove box.", therblig.FIND));
+        stepList.Last ().annotations.Add (objectsOfInterest["glove-box"]);
+        stepList.Add (new stepObject ("Find the glove box handle.", therblig.FIND));
+        stepList.Last ().annotations.Add (objectsOfInterest["glove-box-handle"]);
+        stepList.Add (new stepObject ("Push the glove box handle until the glove box opens.", therblig.PUSH));
+        stepList.Last ().annotations.Add (objectsOfInterest["glove-box-handle"]);
+        stepList.Add (new stepObject ("Inspect the glove box opened correctly", therblig.INSPECT));
+        stepList.Last ().annotations.Add (objectsOfInterest["glove-box-handle"]);
+
+        // Glove Box cover
+        stepList.Add (new stepObject ("Find the glove box cover", therblig.FIND));
+        stepList.Last ().annotations.Add (objectsOfInterest["glove-box-cover"]);
+        stepList.Last ().image = Resources.Load<Texture2D> ("camry-step-images/2");
+        stepList.Add (new stepObject ("Push the glove box cover", therblig.PUSH));
+        stepList.Last ().annotations.Add (objectsOfInterest["glove-box-cover"]);
+        stepList.Last ().image = Resources.Load<Texture2D> ("camry-step-images/2");
+        stepList.Add (new stepObject ("Inspect the glove box cover so that it opened correctly", therblig.INSPECT));
+        // Remove the filter cover
+        stepList.Add (new stepObject ("Find the filter cover", therblig.FIND));
+        stepList.Last ().image = Resources.Load<Texture2D> ("camry-step-images/3");
+        stepList.Last ().annotations.Add (objectsOfInterest["filter-cover"]);
+
+        stepList.Add (new stepObject ("Push the right filter hook/pinch", therblig.PUSH));
+        stepList.Last ().image = Resources.Load<Texture2D> ("camry-step-images/3");
+        stepList.Last ().annotations.Add (objectsOfInterest["filter-right-pinch"]);
+
+        stepList.Add (new stepObject ("Push the left filter hook/pinch", therblig.PUSH));
+        stepList.Last ().image = Resources.Load<Texture2D> ("camry-step-images/3");
+        stepList.Last ().annotations.Add (objectsOfInterest["filter-left-pinch"]);
+
+        stepList.Add (new stepObject ("Find the filter cover", therblig.FIND));
+        stepList.Last ().annotations.Add (objectsOfInterest["filter-cover"]);
+        stepList.Last ().image = Resources.Load<Texture2D> ("camry-step-images/3");
+        stepList.Add (new stepObject ("Grasp the filter cover", therblig.GRASP));
+        stepList.Last ().annotations.Add (objectsOfInterest["filter-cover"]);
+        stepList.Last ().image = Resources.Load<Texture2D> ("camry-step-images/3");
+        stepList.Add (new stepObject ("Pull the filter cover", therblig.PULL));
+        stepList.Last ().annotations.Add (objectsOfInterest["filter-cover"]);
+        stepList.Last ().image = Resources.Load<Texture2D> ("camry-step-images/3");
+
+        // Remove the filter 
+        stepList.Add (new stepObject ("Find the old filter", therblig.FIND));
+        stepList.Last ().image = Resources.Load<Texture2D> ("camry-step-images/3");
+        stepList.Last ().annotations.Add (objectsOfInterest["filter"]);
+        stepList.Add (new stepObject ("Grasp the filter", therblig.GRASP));
+        stepList.Last ().annotations.Add (objectsOfInterest["filter"]);
+        stepList.Last ().image = Resources.Load<Texture2D> ("camry-step-images/3");
+        stepList.Add (new stepObject ("Pull the filter in the arrow direction", therblig.PULL));
+        stepList.Last ().annotations.Add (objectsOfInterest["filter"]);
+        stepList.Last ().image = Resources.Load<Texture2D> ("camry-step-images/3");
+        stepList.Add (new stepObject ("Release the filter", therblig.RELEASE));
+        stepList.Last ().annotations.Add (objectsOfInterest["filter"]);
+
+        stepList.Add (new stepObject ("The task has been completed", therblig.UNKNOWN));

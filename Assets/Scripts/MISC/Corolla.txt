@@ -1,0 +1,145 @@
+   void loadInstructions () {
+        stepObject Intro = new stepObject ("Do-it-yourself maintenance. The air conditioning filter must be changed regularly to maintain air conditioning efficiency.", therblig.UNKNOWN);
+
+        stepObject StepOneAA = new stepObject ("Find the engine switch.", therblig.FIND);
+        stepObject StepOneAB = new stepObject ("Inspect the engine switch to verify it is off. If it is not off, abort the task. ", therblig.INSPECT);
+
+        stepObject StepTwoAA = new stepObject ("Find the glove box.", therblig.FIND);
+        stepObject StepTwoAB = new stepObject ("Find the glove box handle.", therblig.FIND);
+        stepObject StepTwoAC = new stepObject ("Grasp the glove box handle.", therblig.GRASP);
+        stepObject StepTwoAD = new stepObject ("Pull the glove box handle until the glove box drops.", therblig.PULL);
+
+        stepObject StepTwoBA = new stepObject ("Find the damper", therblig.FIND);
+        stepObject StepTwoBB = new stepObject ("Grasp the damper", therblig.GRASP);
+        stepObject StepTwoBC = new stepObject ("Push the damper until it dissembles from the base", therblig.PUSH);
+        stepObject StepTwoBD = new stepObject ("Inspect the damper to verify it dissembled correctly", therblig.INSPECT);
+
+        StepTwoBA.image = Resources.Load<Texture2D> ("Step-images/1");
+        StepTwoBB.image = Resources.Load<Texture2D> ("Step-images/1");
+        StepTwoBC.image = Resources.Load<Texture2D> ("Step-images/1");
+        StepTwoBD.image = Resources.Load<Texture2D> ("Step-images/1");
+
+        stepObject StepThreeAA = new stepObject ("Find the glove box", therblig.FIND);
+        stepObject StepThreeAB = new stepObject ("Find the right wall of the box", therblig.FIND);
+        stepObject StepThreeAC = new stepObject ("Grasp the right wall of the box", therblig.GRASP);
+        stepObject StepThreeAD = new stepObject ("Push the right wall in the arrow’s direction", therblig.PUSH);
+        stepObject StepThreeAE = new stepObject ("Inspect the glove box dissembled correctly", therblig.INSPECT);
+        stepObject StepThreeAF = new stepObject ("Grasp the glove box", therblig.GRASP);
+        stepObject StepThreeAG = new stepObject ("Transport the glove box aside of the current zone", therblig.TRANSPORT);
+        stepObject StepThreeAH = new stepObject ("Release the glove box", therblig.RELEASE);
+
+        StepThreeAA.image = Resources.Load<Texture2D> ("Step-images/2");
+        StepThreeAB.image = Resources.Load<Texture2D> ("Step-images/2");
+        StepThreeAC.image = Resources.Load<Texture2D> ("Step-images/2");
+        StepThreeAD.image = Resources.Load<Texture2D> ("Step-images/2");
+        StepThreeAE.image = Resources.Load<Texture2D> ("Step-images/2");
+        StepThreeAF.image = Resources.Load<Texture2D> ("Step-images/2");
+        StepThreeAG.image = Resources.Load<Texture2D> ("Step-images/2");
+        StepThreeAH.image = Resources.Load<Texture2D> ("Step-images/2");
+
+        stepObject StepFourAA = new stepObject ("Find the old filter", therblig.FIND);
+        stepObject StepFourAB = new stepObject ("Grasp the filter", therblig.GRASP);
+        stepObject StepFourAC = new stepObject ("Pull the filter", therblig.PULL);
+        stepObject StepFourAD = new stepObject ("Release the filter", therblig.RELEASE);
+
+        StepFourAA.image = Resources.Load<Texture2D> ("Step-images/3");
+        StepFourAB.image = Resources.Load<Texture2D> ("Step-images/3");
+        StepFourAC.image = Resources.Load<Texture2D> ("Step-images/4");
+        StepFourAD.image = Resources.Load<Texture2D> ("Step-images/4");
+
+        stepObject StepFiveAA = new stepObject ("Find the release filter", therblig.RELEASE);
+        stepObject StepFiveAB = new stepObject ("Grasp the new filter", therblig.RELEASE);
+        stepObject StepFiveAC = new stepObject ("Transport the new filter box inside the previous whole", therblig.RELEASE);
+        stepObject StepFiveAD = new stepObject ("Align the filter in x angle", therblig.RELEASE);
+        stepObject StepFiveAE = new stepObject ("Insert the filter inside the whole", therblig.RELEASE);
+
+        stepObject End = new stepObject ("The task has been completed", therblig.UNKNOWN);
+
+        StepOneAA.annotations.Add (objectsOfInterest["Engine Switch"]);
+        StepOneAB.annotations.Add (objectsOfInterest["Engine Switch"]);
+
+        StepTwoAA.annotations.Add (objectsOfInterest["Glove Box Handle"]);
+        StepTwoAB.annotations.Add (objectsOfInterest["Glove Box Handle"]);
+        StepTwoAC.annotations.Add (objectsOfInterest["Glove Box Handle"]);
+        StepTwoAD.annotations.Add (objectsOfInterest["Glove Box Handle"]);
+
+        StepTwoBA.annotations.Add (objectsOfInterest["Damper"]);
+        StepTwoBB.annotations.Add (objectsOfInterest["Damper"]);
+        StepTwoBC.annotations.Add (objectsOfInterest["Damper"]);
+        StepTwoBD.annotations.Add (objectsOfInterest["Damper"]);
+
+        StepThreeAA.annotations.Add (objectsOfInterest["Glove Box Handle"]);
+        StepThreeAB.annotations.Add (objectsOfInterest["Right wall"]);
+        StepThreeAC.annotations.Add (objectsOfInterest["Right wall"]);
+        StepThreeAD.annotations.Add (objectsOfInterest["Right wall"]);
+        StepThreeAE.annotations.Add (objectsOfInterest["Glove Box Handle"]);
+        StepThreeAF.annotations.Add (objectsOfInterest["Glove Box Handle"]);
+        StepThreeAG.annotations.Add (objectsOfInterest["Glove Box Handle"]);
+        StepThreeAH.annotations.Add (objectsOfInterest["Glove Box Handle"]);
+
+        StepFourAA.annotations.Add (objectsOfInterest["Air Filter (white rectangle)"]);
+        StepFourAB.annotations.Add (objectsOfInterest["Air Filter (white rectangle)"]);
+        StepFourAC.annotations.Add (objectsOfInterest["Air Filter (white rectangle)"]);
+        StepFourAD.annotations.Add (objectsOfInterest["Air Filter (white rectangle)"]);
+
+        StepFiveAA.annotations.Add (objectsOfInterest["Air Filter (white rectangle)"]);
+        StepFiveAB.annotations.Add (objectsOfInterest["Air Filter (white rectangle)"]);
+        StepFiveAC.annotations.Add (objectsOfInterest["Air Filter (white rectangle)"]);
+        StepFiveAD.annotations.Add (objectsOfInterest["Air Filter (white rectangle)"]);
+        StepFiveAE.annotations.Add (objectsOfInterest["Air Filter (white rectangle)"]);
+
+        // Adds steps       
+        instructions.steps.Add (Intro);
+
+        instructions.steps.Add (StepOneAA);
+        instructions.steps.Add (StepOneAB);
+
+        instructions.steps.Add (StepTwoAA);
+        instructions.steps.Add (StepTwoAB);
+        instructions.steps.Add (StepTwoAC);
+        instructions.steps.Add (StepTwoAD);
+        instructions.steps.Add (StepTwoBA);
+        instructions.steps.Add (StepTwoBB);
+        instructions.steps.Add (StepTwoBC);
+        instructions.steps.Add (StepTwoBD);
+
+        instructions.steps.Add (StepThreeAA);
+        instructions.steps.Add (StepThreeAB);
+        instructions.steps.Add (StepThreeAC);
+        instructions.steps.Add (StepThreeAD);
+        instructions.steps.Add (StepThreeAE);
+        instructions.steps.Add (StepThreeAF);
+        instructions.steps.Add (StepThreeAG);
+        instructions.steps.Add (StepThreeAH);
+
+        instructions.steps.Add (StepFourAA);
+        instructions.steps.Add (StepFourAB);
+        instructions.steps.Add (StepFourAC);
+        instructions.steps.Add (StepFourAD);
+        instructions.steps.Add (StepFiveAA);
+        instructions.steps.Add (StepFiveAB);
+        instructions.steps.Add (StepFiveAC);
+        instructions.steps.Add (StepFiveAD);
+        instructions.steps.Add (StepFiveAE);
+
+        instructions.steps.Add (End);
+
+    }
+    void loadAnnotIntoMatrixes () {
+        // ADJUST ROTATION
+
+        objectsOfInterest.Add ("Engine Switch", new annotObject ("Engine Switch", tools.fromEulerToQuaternion (0, 0, 0), tools.createPosition (-0.75f, -0.05f, 0.03f)));
+
+        objectsOfInterest.Add ("Glove Box Handle", new annotObject ("Glove Box Handle", tools.fromEulerToQuaternion (0, 0, 0), tools.createPosition (-0.11f, 0.06f, -0.08f)));
+
+        objectsOfInterest.Add ("Damper", new annotObject ("Damper", tools.fromEulerToQuaternion (0, 0, 0), tools.createPosition (0.06f, 0.06f, -0.08f)));
+
+        objectsOfInterest.Add ("Left Hook", new annotObject ("Left Hook", tools.fromEulerToQuaternion (0, 0, 0), tools.createPosition (-0.16f, -0.20f, -0.30f)));
+        objectsOfInterest.Add ("Right Hook", new annotObject ("Right Hook", tools.fromEulerToQuaternion (0, 0, 0), tools.createPosition (0.14f, -0.20f, -0.30f)));
+
+        objectsOfInterest.Add ("Left wall", new annotObject ("Right wall", tools.fromEulerToQuaternion (0, 0, 0), tools.createPosition (-0.22f, -0.06f, -0.14f)));
+        objectsOfInterest.Add ("Right wall", new annotObject ("Right wall", tools.fromEulerToQuaternion (0, 0, 0), tools.createPosition (0.19f, -0.06f, -0.14f)));
+
+        objectsOfInterest.Add ("Air Filter (white rectangle)", new annotObject ("Air Filter (white rectangle)", tools.fromEulerToQuaternion (0, 0, 0), tools.createPosition (0, -0.06f, -0.08f)));
+
+    }
